@@ -1,0 +1,173 @@
+GAS LISTING /tmp/ccd03749.s 			page 1
+
+
+   1              		.file	"_new.cpp"
+   2              		.option pic
+   3              		.option norelax
+   4              		.text
+   5              	.Ltext0:
+   6              		.align	2
+   7              		.globl	_Znwm
+   9              	_Znwm:
+  10              	.LFB20:
+  11              		.file 1 "src/../h/syscall_cpp.hpp"
+   1:src/../h/syscall_cpp.hpp **** #ifndef _syscall_cpp
+   2:src/../h/syscall_cpp.hpp **** #define _syscall_cpp
+   3:src/../h/syscall_cpp.hpp **** 
+   4:src/../h/syscall_cpp.hpp **** #include "syscall_c.hpp"
+   5:src/../h/syscall_cpp.hpp **** 
+   6:src/../h/syscall_cpp.hpp **** void* operator new (size_t sz) {return mem_alloc(sz);}
+  12              		.loc 1 6 32
+  13              		.cfi_startproc
+  14              	.LVL0:
+  15 0000 130101FF 		addi	sp,sp,-16
+  16              		.cfi_def_cfa_offset 16
+  17 0004 23341100 		sd	ra,8(sp)
+  18 0008 23308100 		sd	s0,0(sp)
+  19              		.cfi_offset 1, -8
+  20              		.cfi_offset 8, -16
+  21 000c 13040101 		addi	s0,sp,16
+  22              		.cfi_def_cfa 8, 0
+  23              		.loc 1 6 33
+  24              		.loc 1 6 49 is_stmt 0
+  25 0010 97000000 		call	_Z9mem_allocm@plt
+  25      E7800000 
+  26              	.LVL1:
+  27              		.loc 1 6 54
+  28 0018 83308100 		ld	ra,8(sp)
+  29              		.cfi_restore 1
+  30 001c 03340100 		ld	s0,0(sp)
+  31              		.cfi_restore 8
+  32              		.cfi_def_cfa 2, 16
+  33 0020 13010101 		addi	sp,sp,16
+  34              		.cfi_def_cfa_offset 0
+  35 0024 67800000 		jr	ra
+  36              		.cfi_endproc
+  37              	.LFE20:
+  39              		.align	2
+  40              		.globl	_ZdlPv
+  42              	_ZdlPv:
+  43              	.LFB21:
+   7:src/../h/syscall_cpp.hpp **** void operator delete(void* addr) { mem_free(addr);}
+  44              		.loc 1 7 34 is_stmt 1
+  45              		.cfi_startproc
+  46              	.LVL2:
+  47 0028 130101FF 		addi	sp,sp,-16
+  48              		.cfi_def_cfa_offset 16
+  49 002c 23341100 		sd	ra,8(sp)
+  50 0030 23308100 		sd	s0,0(sp)
+  51              		.cfi_offset 1, -8
+  52              		.cfi_offset 8, -16
+GAS LISTING /tmp/ccd03749.s 			page 2
+
+
+  53 0034 13040101 		addi	s0,sp,16
+  54              		.cfi_def_cfa 8, 0
+  55              		.loc 1 7 36
+  56              		.loc 1 7 44 is_stmt 0
+  57 0038 97000000 		call	_Z8mem_freePv@plt
+  57      E7800000 
+  58              	.LVL3:
+  59              		.loc 1 7 51
+  60 0040 83308100 		ld	ra,8(sp)
+  61              		.cfi_restore 1
+  62 0044 03340100 		ld	s0,0(sp)
+  63              		.cfi_restore 8
+  64              		.cfi_def_cfa 2, 16
+  65 0048 13010101 		addi	sp,sp,16
+  66              		.cfi_def_cfa_offset 0
+  67 004c 67800000 		jr	ra
+  68              		.cfi_endproc
+  69              	.LFE21:
+  71              	.Letext0:
+  72              		.file 2 "src/../lib/hw.h"
+  73              		.file 3 "src/../h/syscall_c.hpp"
+GAS LISTING /tmp/ccd03749.s 			page 3
+
+
+DEFINED SYMBOLS
+                            *ABS*:0000000000000000 _new.cpp
+     /tmp/ccd03749.s:9      .text:0000000000000000 _Znwm
+     /tmp/ccd03749.s:13     .text:0000000000000000 .L0 
+     /tmp/ccd03749.s:15     .text:0000000000000000 .L0 
+     /tmp/ccd03749.s:16     .text:0000000000000004 .L0 
+     /tmp/ccd03749.s:19     .text:000000000000000c .L0 
+     /tmp/ccd03749.s:20     .text:000000000000000c .L0 
+     /tmp/ccd03749.s:22     .text:0000000000000010 .L0 
+     /tmp/ccd03749.s:24     .text:0000000000000010 .L0 
+     /tmp/ccd03749.s:25     .text:0000000000000010 .L0 
+     /tmp/ccd03749.s:28     .text:0000000000000018 .L0 
+     /tmp/ccd03749.s:29     .text:000000000000001c .L0 
+     /tmp/ccd03749.s:31     .text:0000000000000020 .L0 
+     /tmp/ccd03749.s:32     .text:0000000000000020 .L0 
+     /tmp/ccd03749.s:34     .text:0000000000000024 .L0 
+     /tmp/ccd03749.s:36     .text:0000000000000028 .L0 
+     /tmp/ccd03749.s:42     .text:0000000000000028 _ZdlPv
+     /tmp/ccd03749.s:45     .text:0000000000000028 .L0 
+     /tmp/ccd03749.s:47     .text:0000000000000028 .L0 
+     /tmp/ccd03749.s:48     .text:000000000000002c .L0 
+     /tmp/ccd03749.s:51     .text:0000000000000034 .L0 
+     /tmp/ccd03749.s:52     .text:0000000000000034 .L0 
+     /tmp/ccd03749.s:54     .text:0000000000000038 .L0 
+     /tmp/ccd03749.s:56     .text:0000000000000038 .L0 
+     /tmp/ccd03749.s:57     .text:0000000000000038 .L0 
+     /tmp/ccd03749.s:60     .text:0000000000000040 .L0 
+     /tmp/ccd03749.s:61     .text:0000000000000044 .L0 
+     /tmp/ccd03749.s:63     .text:0000000000000048 .L0 
+     /tmp/ccd03749.s:64     .text:0000000000000048 .L0 
+     /tmp/ccd03749.s:66     .text:000000000000004c .L0 
+     /tmp/ccd03749.s:68     .text:0000000000000050 .L0 
+     /tmp/ccd03749.s:74     .text:0000000000000050 .L0 
+     /tmp/ccd03749.s:294    .debug_abbrev:0000000000000000 .Ldebug_abbrev0
+     /tmp/ccd03749.s:674    .debug_str:0000000000000167 .LASF24
+     /tmp/ccd03749.s:678    .debug_str:000000000000023a .LASF25
+     /tmp/ccd03749.s:632    .debug_str:0000000000000041 .LASF26
+     /tmp/ccd03749.s:5      .text:0000000000000000 .Ltext0
+     /tmp/ccd03749.s:71     .text:0000000000000050 .Letext0
+     /tmp/ccd03749.s:620    .debug_line:0000000000000000 .Ldebug_line0
+     /tmp/ccd03749.s:650    .debug_str:00000000000000c2 .LASF0
+     /tmp/ccd03749.s:652    .debug_str:00000000000000cf .LASF1
+     /tmp/ccd03749.s:646    .debug_str:00000000000000a1 .LASF2
+     /tmp/ccd03749.s:640    .debug_str:000000000000008d .LASF4
+     /tmp/ccd03749.s:668    .debug_str:000000000000013b .LASF3
+     /tmp/ccd03749.s:624    .debug_str:0000000000000010 .LASF5
+     /tmp/ccd03749.s:654    .debug_str:00000000000000e2 .LASF6
+     /tmp/ccd03749.s:648    .debug_str:00000000000000af .LASF7
+     /tmp/ccd03749.s:680    .debug_str:0000000000000247 .LASF8
+     /tmp/ccd03749.s:638    .debug_str:000000000000007f .LASF9
+     /tmp/ccd03749.s:660    .debug_str:0000000000000108 .LASF10
+     /tmp/ccd03749.s:676    .debug_str:000000000000022b .LASF11
+     /tmp/ccd03749.s:626    .debug_str:0000000000000017 .LASF12
+     /tmp/ccd03749.s:622    .debug_str:0000000000000000 .LASF13
+     /tmp/ccd03749.s:628    .debug_str:0000000000000027 .LASF14
+     /tmp/ccd03749.s:666    .debug_str:0000000000000125 .LASF15
+     /tmp/ccd03749.s:634    .debug_str:0000000000000064 .LASF16
+GAS LISTING /tmp/ccd03749.s 			page 4
+
+
+     /tmp/ccd03749.s:636    .debug_str:000000000000007a .LASF17
+     /tmp/ccd03749.s:656    .debug_str:00000000000000f5 .LASF18
+     /tmp/ccd03749.s:672    .debug_str:0000000000000157 .LASF27
+     /tmp/ccd03749.s:644    .debug_str:000000000000009a .LASF28
+     /tmp/ccd03749.s:43     .text:0000000000000028 .LFB21
+     /tmp/ccd03749.s:69     .text:0000000000000050 .LFE21
+     /tmp/ccd03749.s:662    .debug_str:0000000000000117 .LASF19
+     /tmp/ccd03749.s:579    .debug_loc:0000000000000000 .LLST1
+     /tmp/ccd03749.s:58     .text:0000000000000040 .LVL3
+     /tmp/ccd03749.s:682    .debug_str:0000000000000257 .LASF29
+     /tmp/ccd03749.s:642    .debug_str:0000000000000094 .LASF30
+     /tmp/ccd03749.s:10     .text:0000000000000000 .LFB20
+     /tmp/ccd03749.s:37     .text:0000000000000028 .LFE20
+     /tmp/ccd03749.s:593    .debug_loc:0000000000000039 .LLST0
+     /tmp/ccd03749.s:26     .text:0000000000000018 .LVL1
+     /tmp/ccd03749.s:658    .debug_str:00000000000000fa .LASF20
+     /tmp/ccd03749.s:664    .debug_str:000000000000011c .LASF22
+     /tmp/ccd03749.s:630    .debug_str:0000000000000033 .LASF21
+     /tmp/ccd03749.s:670    .debug_str:000000000000014d .LASF23
+     /tmp/ccd03749.s:46     .text:0000000000000028 .LVL2
+     /tmp/ccd03749.s:14     .text:0000000000000000 .LVL0
+     /tmp/ccd03749.s:75     .debug_info:0000000000000000 .Ldebug_info0
+
+UNDEFINED SYMBOLS
+_Z9mem_allocm
+_Z8mem_freePv
